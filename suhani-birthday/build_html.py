@@ -32,9 +32,9 @@ pages.append(f"""
     <div class="torn-paper">
       <h3>SUHANI<br>TURNS 20</h3>
       <p>Jaipur, September 23</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae eleifend magna. Curabitur sed nunc nec nisi ultricies commodo. Duis sit amet ipsum eu turpis ullamcorper sollicitudin. Proin facilisis, urna vel fringilla cursus.</p>
-      <p>Aliquam erat volutpat. Phasellus ut condimentum diam, sed pulvinar purus. Sed ullamcorper dui nec tortor tristique sagittis. Sed vel nisl non dolor pretium condimentum. Vivamus egestas, dolor at congue tincidunt.</p>
-      <p>Pellentesque id nunc metus. Aenean dignissim mi rhoncus libero cursus pulvinar. Etiam fringilla sit amet massa efficitur gravida. Ut id leo lacus. Aenean nec eros vitae urna vehicula tincidunt sit amet finibus nunc.</p>
+      <p>Welcome to your 20s! A beautiful milestone for the most amazing, sweet, and sometimes completely crazy girl. This little book is a collection of memories, love, inside jokes, and all the reasons why you mean so much to everyone around you.</p>
+      <p>From taking 45 minutes when you say 'bas 2 minute', to getting angry for no reason and then acting like nothing happened—every little thing about you is special. You bring so much life, laughter, and drama into our world.</p>
+      <p>As you step into this new decade, we hope all your dreams come true. Keep smiling, stay exactly as cute (and slightly annoying) as you are, and know that you are deeply loved by your family, your friends, and Ansh. Happy Birthday!</p>
     </div>
 
     <div class="scrapbook-photo-container">
