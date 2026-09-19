@@ -1,0 +1,206 @@
+{
+  "photo1": {
+    "file": "photo_001.jpeg",
+    "pos": "center"
+  },
+  "photo2": {
+    "file": "photo_002.jpeg",
+    "pos": "center"
+  },
+  "photo3": {
+    "file": "photo_003.jpeg",
+    "pos": "center"
+  },
+  "photo4": {
+    "file": "photo_004.jpeg",
+    "pos": "center"
+  },
+  "photo5": {
+    "file": "photo_005.jpeg",
+    "pos": "center"
+  },
+  "photo6": {
+    "file": "photo_006.jpeg",
+    "pos": "center"
+  },
+  "photo7": {
+    "file": "photo_007.jpeg",
+    "pos": "center"
+  },
+  "photo8": {
+    "file": "photo_008.jpeg",
+    "pos": "center"
+  },
+  "photo9": {
+    "file": "photo_009.jpeg",
+    "pos": "center"
+  },
+  "photo10": {
+    "file": "photo_010.jpeg",
+    "pos": "center"
+  },
+  "photo11": {
+    "file": "photo_011.jpeg",
+    "pos": "center"
+  },
+  "photo12": {
+    "file": "photo_012.jpeg",
+    "pos": "center"
+  },
+  "photo13": {
+    "file": "photo_013.jpeg",
+    "pos": "center"
+  },
+  "photo14": {
+    "file": "photo_014.jpeg",
+    "pos": "center"
+  },
+  "photo15": {
+    "file": "photo_015.jpeg",
+    "pos": "center"
+  },
+  "photo16": {
+    "file": "photo_016.jpeg",
+    "pos": "center"
+  },
+  "photo17": {
+    "file": "photo_017.jpeg",
+    "pos": "center"
+  },
+  "photo18": {
+    "file": "photo_018.jpeg",
+    "pos": "center"
+  },
+  "photo19": {
+    "file": "photo_019.jpeg",
+    "pos": "center"
+  },
+  "photo20": {
+    "file": "photo_020.jpeg",
+    "pos": "center"
+  },
+  "photo21": {
+    "file": "photo_021.jpeg",
+    "pos": "center"
+  },
+  "photo22": {
+    "file": "photo_022.jpeg",
+    "pos": "center"
+  },
+  "photo23": {
+    "file": "photo_023.jpeg",
+    "pos": "center"
+  },
+  "photo24": {
+    "file": "photo_024.jpeg",
+    "pos": "center"
+  },
+  "photo25": {
+    "file": "photo_025.jpeg",
+    "pos": "center"
+  },
+  "photo26": {
+    "file": "photo_026.jpeg",
+    "pos": "center"
+  },
+  "photo27": {
+    "file": "photo_027.jpeg",
+    "pos": "center"
+  },
+  "photo28": {
+    "file": "photo_028.jpeg",
+    "pos": "center"
+  },
+  "photo29": {
+    "file": "photo_029.jpeg",
+    "pos": "center"
+  },
+  "photo30": {
+    "file": "photo_030.jpeg",
+    "pos": "center"
+  },
+  "photo31": {
+    "file": "photo_031.jpeg",
+    "pos": "center"
+  },
+  "photo32": {
+    "file": "photo_032.jpeg",
+    "pos": "center"
+  },
+  "photo33": {
+    "file": "photo_033.jpeg",
+    "pos": "center"
+  },
+  "photo34": {
+    "file": "photo_034.jpeg",
+    "pos": "center"
+  },
+  "photo35": {
+    "file": "photo_035.jpeg",
+    "pos": "center"
+  },
+  "photo36": {
+    "file": "photo_036.jpeg",
+    "pos": "center"
+  },
+  "photo37": {
+    "file": "photo_037.jpeg",
+    "pos": "center"
+  },
+  "photo38": {
+    "file": "photo_038.jpeg",
+    "pos": "center"
+  },
+  "photo39": {
+    "file": "photo_039.jpeg",
+    "pos": "center"
+  },
+  "photo40": {
+    "file": "photo_040.jpeg",
+    "pos": "center"
+  },
+  "photo41": {
+    "file": "photo_041.jpeg",
+    "pos": "center"
+  },
+  "photo42": {
+    "file": "photo_042.jpeg",
+    "pos": "center"
+  },
+  "photo43": {
+    "file": "photo_043.jpeg",
+    "pos": "center"
+  },
+  "photo44": {
+    "file": "photo_044.jpeg",
+    "pos": "center"
+  },
+  "photo45": {
+    "file": "photo_045.jpeg",
+    "pos": "center"
+  },
+  "photo46": {
+    "file": "photo_046.jpeg",
+    "pos": "center"
+  },
+  "photo47": {
+    "file": "photo_047.jpeg",
+    "pos": "center"
+  },
+  "photo48": {
+    "file": "photo_048.jpeg",
+    "pos": "center"
+  },
+  "photo49": {
+    "file": "photo_049.jpeg",
+    "pos": "center"
+  },
+  "cover": {
+    "file": "photo_001.jpeg",
+    "pos": "center"
+  },
+  "dedication": {
+    "file": "photo_002.jpeg",
+    "pos": "center"
+  }
+}

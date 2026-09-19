@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fredoka:wght@600;700&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --cream: #FAF6F0;
+  --blush: #FFD1DC;
+  --lilac: #E6E6FA;
+  --butter: #FFFDD0;
+  --kraft: #D4B895;
+  --pink: #FFB6C1;
+  --plum: #4A192C;
+  --raspberry: #D21F3C;
+  --gold: #FFD700;
+  
+  --shadow-hard: 6px 6px 0px rgba(0,0,0,0.15);
+  --shadow-soft: 0px 10px 30px rgba(0,0,0,0.1);
+  --shadow-sticker: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; font-family: 'Nunito', sans-serif; color: var(--plum); background: #ccc; }
+
+@page { size: 8in 8in; margin: 0; }
+.page { width: 8in; height: 8in; position: relative; overflow: hidden; background-color: var(--cream); page-break-after: always; display: flex; flex-direction: column; padding: 40px; }
+
+/* Utilities */
+h1, h2, h3, .title { font-family: 'Fredoka', sans-serif; color: var(--raspberry); margin: 0; }
+.handwriting { font-family: 'Caveat', cursive; font-size: 1.5rem; color: #333; }
+
+/* Sticky Tape */
+.tape {
+  position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(-2deg);
+  width: 100px; height: 25px; background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.05); z-index: 20;
+}
+
+/* Page: Cover Scrapbook Redesign */
+.page-cover {
+  background: linear-gradient(90deg, var(--cream) 20%, #D8B4E2 20%);
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid var(--pink);
+}
+.torn-paper {
+  position: absolute;
+  left: -15px; /* Offset to cover the border slightly */
+  top: -15px;
+  bottom: -15px;
+  width: 170px; /* Increased width */
+  background: var(--cream);
+  border-right: 3px dashed #ddd;
+  box-shadow: 5px 0 10px rgba(0,0,0,0.05);
+  padding: 40px 10px 30px 30px; /* Added left padding to prevent cutoff */
+  font-family: 'Times New Roman', serif;
+  font-size: 0.5rem;
+  line-height: 1.2;
+  color: #555;
+  overflow: hidden;
+}
+.torn-paper h3 {
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 5px;
+}
+.scrapbook-photo-container {
+  position: relative;
+  z-index: 10;
+  width: 450px;
+  height: 550px;
+  margin-top: 20px;
+  margin-left: 100px; /* Push further right of torn paper */
+}
+.scrapbook-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: path('M 225, 0 C 350, 0 450, 100 450, 275 C 450, 450 350, 550 225, 550 C 100, 550 0, 450 0, 275 C 0, 100 100, 0 225, 0 Z');
+}
+.photo-wrapper {
+  filter: drop-shadow(0px 0px 0px 12px white) drop-shadow(5px 5px 15px rgba(0,0,0,0.2));
+  width: 100%;
+  height: 100%;
+}
+.main-title {
+  position: absolute;
+  bottom: 120px;
+  left: 50px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 6rem;
+  color: #D21F3C;
+  text-transform: capitalize;
+  text-shadow: -6px -6px 0 white, 6px -6px 0 white, -6px 6px 0 white, 6px 6px 0 white, 8px 8px 15px rgba(0,0,0,0.3);
+  z-index: 20;
+  transform: rotate(-5deg);
+}
+.sub-title {
+  position: absolute;
+  top: 10px; /* Brought down from -40px */
+  left: 20px;
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  color: var(--gold);
+  text-shadow: 1px 1px 0px white, -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white;
+  transform: rotate(-10deg);
+}
+.love-text {
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--plum);
+  z-index: 20;
+}
+.sticker {
+  position: absolute;
+  z-index: 15;
+  filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.2)) drop-shadow(0 0 0 4px white);
+}
+.sticker-sun { top: 20px; left: 180px; font-size: 5rem; transform: rotate(15deg); }
+.sticker-balloons { top: 20px; right: 40px; font-size: 4rem; transform: rotate(-10deg); }
+.sticker-sunflower { bottom: 20px; right: 20px; font-size: 6rem; transform: rotate(5deg); }
+.sticker-cat { top: 200px; left: 160px; width: 80px; transform: rotate(-15deg); }
+.stamp-20 {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  border: 4px dashed var(--pink);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.5rem;
+  color: var(--pink);
+  transform: rotate(-25deg);
+}
+.bubble-20 {
+  position: absolute;
+  top: 100px;
+  left: 140px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 4rem;
+  color: var(--raspberry);
+  text-shadow: -3px -3px 0 white, 3px -3px 0 white, -3px 3px 0 white, 3px 3px 0 white;
+  transform: rotate(-15deg);
+  z-index: 20;
+}
+
+/* Endpaper */
+.page-endpaper { background: var(--lilac); background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.5) 10px, rgba(255,255,255,0.5) 20px); }
+
+/* Dedication */
+.page-dedication { justify-content: center; align-items: center; }
+.journal-card { background: white; width: 80%; padding: 40px; box-shadow: var(--shadow-soft); border-left: 2px solid var(--pink); background-image: repeating-linear-gradient(transparent, transparent 31px, #e5e5e5 31px, #e5e5e5 32px); line-height: 32px; position: relative; }
+.journal-card h2 { font-size: 2.5rem; margin-bottom: 20px; background: white; display: inline-block; padding-right: 10px; }
+.journal-card p { font-size: 1.2rem; margin: 0; }
+
+/* Sticky Notes */
+.sticky-note {
+  background: var(--butter); padding: 20px; box-shadow: var(--shadow-sticker);
+  font-family: 'Caveat', cursive; font-size: 1.5rem; position: relative; width: 45%; margin: 10px; display: inline-block;
+}
+
+/* Scrapbook grid for habits/quotes */
+.grid-container { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; margin-top: 20px; }
+
+.section-title { font-size: 3rem; text-align: center; margin-bottom: 30px; text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff; transform: rotate(-2deg); }
+
+.photo-stamp {
+  width: 150px; 
+  background: white; 
+  padding: 8px 8px 25px 8px; 
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25), 0 0 10px rgba(255,182,193,0.4); 
+  border-radius: 3px; 
+  position: relative; 
+  z-index: 5;
+  transform: rotate(3deg); 
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.photo-stamp img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border: 1px solid #eee; 
+  border-radius: 2px;
+}
+
+/* Newspaper Slide */
+.page-newspaper {
+  background-color: #F4F1EA; /* off-white newsprint color */
+  font-family: 'Times New Roman', serif;
+  color: #2F2A38;
+  padding: 40px;
+  position: relative;
+  display: block;
+}
+
+.newspaper-header {
+  text-align: center;
+  border-top: 4px solid #332B3A;
+  border-bottom: 2px solid #332B3A;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.newspaper-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #332B3A;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.newspaper-meta {
+  font-family: 'Times New Roman', serif;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #332B3A;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #332B3A;
+}
+
+.newspaper-headline {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  color: #332B3A;
+  margin: 10px 0 5px 0;
+}
+
+.newspaper-subtitle {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Times New Roman', serif;
+}
+
+.newspaper-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.newspaper-col-1 {
+  width: 40%;
+}
+
+.newspaper-col-2, .newspaper-col-3 {
+  width: 30%;
+}
+
+.newspaper-photo {
+  width: 100%;
+  border: 1px solid #999;
+  filter: grayscale(100%) contrast(1.2);
+  margin-bottom: 5px;
+}
+
+.newspaper-caption {
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.newspaper-article {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.newspaper-article strong {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.newspaper-extra-sticker {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #F4428B;
+  color: white;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  transform: rotate(15deg);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}

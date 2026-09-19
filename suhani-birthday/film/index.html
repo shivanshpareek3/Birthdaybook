@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suhani's 20th Birthday Film</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@600&family=Nunito:wght@400;700&display=swap');
+    
+    body, html { 
+      margin: 0; padding: 0; background: #0a0a0a; overflow: hidden; 
+      display: flex; justify-content: center; align-items: center; 
+      height: 100vh; width: 100vw;
+      font-family: 'Nunito', sans-serif;
+    }
+    
+    /* Responsive Player Container */
+    #player { 
+      width: 100%; height: 100%; 
+      position: relative; overflow: hidden; 
+      background: black;
+    }
+    
+    .scene { 
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+      opacity: 0; transition: opacity 1.5s ease-in-out; 
+      display: flex; flex-direction: column; justify-content: center; align-items: center; 
+    }
+    .scene.active { opacity: 1; z-index: 10; }
+    
+    .ken-burns { 
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+      object-fit: contain; /* ensures full image is visible */
+      z-index: 1; 
+      animation: none; 
+      opacity: 0.8;
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.1));
+    }
+    
+    /* Apply animation only to active scene */
+    .active .ken-burns { 
+      animation: kenburns 6s ease-out forwards; 
+    }
+    
+    @keyframes kenburns { 
+      0% { transform: scale(1.0); } 
+      100% { transform: scale(1.15); } 
+    }
+    
+    .text-overlay {
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      right: 5%;
+      text-align: center;
+      z-index: 10;
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+    }
+    
+    .text-overlay p { 
+      font-family: 'Caveat', cursive; 
+      font-size: clamp(2rem, 5vw, 4rem); 
+      font-weight: bold; 
+      color: #fff; 
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.8), -1px -1px 0 rgba(0,0,0,0.5); 
+      line-height: 1.3;
+    }
+
+    #start-btn {
+      position: absolute;
+      z-index: 100;
+      padding: 15px 30px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.5rem;
+      background: #D21F3C;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    #start-btn:hover { transform: scale(1.05); }
+    
+    .hidden { display: none !important; }
+    
+  </style>
+</head>
+<body>
+
+  <button id="start-btn">▶ Play Birthday Film</button>
+
+  <div id="player">
+    
+        <div class="scene" id="scene0">
+          <img src="../photos/originals/photo_005.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>To the girl who makes my world brighter...</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene1">
+          <img src="../photos/originals/photo_021.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Happy 20th Birthday, my beautiful Suhani. ❤️</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene2">
+          <img src="../photos/originals/photo_019.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>It feels like just yesterday we met, yet I can't imagine life without you.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene3">
+          <img src="../photos/originals/photo_018.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Your smile is my favorite thing in the whole world.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene4">
+          <img src="../photos/originals/roshni.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Even when you're angry, you look incredibly cute.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene5">
+          <img src="../photos/originals/photo_017.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I love how we can talk about everything and nothing all at once.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene6">
+          <img src="../photos/originals/photo_010.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>You are the peace in my chaotic days.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene7">
+          <img src="../photos/originals/a1.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Every time you laugh, my heart skips a beat.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene8">
+          <img src="../photos/originals/photo_013.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I cherish every silly argument and every sweet makeup.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene9">
+          <img src="../photos/originals/a5.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>You're not just my girl, you're my best friend.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene10">
+          <img src="../photos/originals/photo_042.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I love the way your eyes light up when you see food.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene11">
+          <img src="../photos/originals/cover.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Your nakhre are tough to handle, but I wouldn't have it any other way.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene12">
+          <img src="../photos/originals/photo_002.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>You make the ordinary moments feel extraordinary.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene13">
+          <img src="../photos/originals/s4.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I promise to always listen to your endless stories.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene14">
+          <img src="../photos/originals/kashish2.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Even your 'bhaad mae jao' sounds sweet to me now.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene15">
+          <img src="../photos/originals/photo_048.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>You are the most beautiful part of my life.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene16">
+          <img src="../photos/originals/a2.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I love the way you say my name.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene17">
+          <img src="../photos/originals/sushmita.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>You are my safe space, my home.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene18">
+          <img src="../photos/originals/photo_012.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I'll always be here to hold your hand.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene19">
+          <img src="../photos/originals/photo_032.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Your happiness means everything to me.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene20">
+          <img src="../photos/originals/photo_029.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I love you more than words could ever explain.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene21">
+          <img src="../photos/originals/3.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>You are the dream I never want to wake up from.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene22">
+          <img src="../photos/originals/photo_038.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I promise to always try my best for you.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene23">
+          <img src="../photos/originals/kashish.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Even when you take 45 minutes to get ready...</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene24">
+          <img src="../photos/originals/photo_041.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>...it's always worth the wait, because you look stunning.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene25">
+          <img src="../photos/originals/s3.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I want to travel the world with you.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene26">
+          <img src="../photos/originals/kashis1.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I want to create a million more memories with you.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene27">
+          <img src="../photos/originals/s1.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>You are my favorite notification.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene28">
+          <img src="../photos/originals/photo_037.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Thank you for being exactly who you are.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene29">
+          <img src="../photos/originals/photo_008.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Thank you for letting me be me.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene30">
+          <img src="../photos/originals/photo_044.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I love your kindness, your attitude, and your heart.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene31">
+          <img src="../photos/originals/photo_001.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Welcome to your 20s, my love.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene32">
+          <img src="../photos/originals/photo_049.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>May this year bring you everything you desire.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene33">
+          <img src="../photos/originals/photo_016.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>I will always be your biggest cheerleader.</p>
+          </div>
+        </div>
+        
+
+        <div class="scene" id="scene34">
+          <img src="../photos/originals/a6.jpeg" class="ken-burns" alt="Memory">
+          <div class="text-overlay">
+            <p>Here's to a lifetime of us. I love you, Kiddo. ❤️</p>
+          </div>
+        </div>
+        
+  </div>
+  
+  <!-- Hidden YouTube Player for Background Music -->
+  <div id="yt-player" class="hidden"></div>
+  
+  <script>
+    const scenes = document.querySelectorAll('.scene');
+    const startBtn = document.getElementById('start-btn');
+    let current = 0;
+    const SCENE_DURATION = 4300; // 4.3 seconds per scene
+    
+    // YouTube Player API
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('yt-player', {
+        height: '0',
+        width: '0',
+        videoId: '7maJOI3QMu0', // Yiruma - River Flows in You (Beautiful Romantic Piano)
+        playerVars: {
+          'autoplay': 0,
+          'controls': 0,
+          'loop': 1,
+          'playlist': '7maJOI3QMu0'
+        },
+      });
+    }
+    
+    function nextScene() {
+      if(current > 0) scenes[current-1].classList.remove('active');
+      if(current < scenes.length) {
+        scenes[current].classList.add('active');
+        current++;
+        setTimeout(nextScene, SCENE_DURATION);
+      } else {
+        // End of film
+        scenes[current-1].innerHTML = '<div class="text-overlay" style="bottom: 40%;"><p style="font-size: 5rem;">Happy 20th Birthday, Kiddo! ❤️</p></div>';
+      }
+    }
+    
+    startBtn.addEventListener('click', () => {
+      startBtn.classList.add('hidden');
+      
+      // Play YouTube audio
+      if (player && typeof player.playVideo === 'function') {
+        player.playVideo();
+      }
+      
+      // Start the film
+      nextScene();
+    });
+  </script>
+</body>
+</html>
