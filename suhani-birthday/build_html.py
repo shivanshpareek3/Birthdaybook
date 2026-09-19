@@ -272,6 +272,8 @@ for person, wish_text in content.get('wishes', {}).items():
             chunk_html += '<div style="text-align: center; margin-top: 30px;"><div class="photo-stamp" style="display: inline-block; width: 240px; height: 280px; transform: rotate(-2deg);"><img src="photos/originals/a1.jpeg" alt="Ansh"></div></div>'
         elif person == 'pau' and i == 0:
             chunk_html += '<div style="text-align: center; margin-top: 30px;"><div class="photo-stamp" style="display: inline-block; width: 220px; height: 260px; transform: rotate(3deg);"><img src="photos/originals/pau.jpeg" alt="Pau"></div></div>'
+        elif person == 'arumita' and i == 0:
+            chunk_html += '<div style="text-align: center; margin-top: 30px;"><div class="photo-stamp" style="display: inline-block; width: 240px; height: 280px; transform: rotate(-4deg);"><img src="photos/originals/arumita.jpeg" alt="Arumita"></div></div>'
         elif person == 'kashish' and i == 0:
             photo_insert = '''
             <div style="float: right; width: 340px; display: flex; flex-wrap: wrap; justify-content: center; margin-left: 15px; margin-bottom: 10px;">
