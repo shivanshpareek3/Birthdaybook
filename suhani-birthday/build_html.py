@@ -221,7 +221,7 @@ for i, chunk in enumerate(chunks):
     pages.append(f"""
       <section class="page">
         <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px; text-align: left;">{title}</h2>
-        <div class="journal-card" style="width: 100%; height: 85%; padding: 20px; box-sizing: border-box;">
+        <div class="journal-card" style="width: 100%; flex-grow: 1; padding: 20px; box-sizing: border-box;">
           <div style="font-size: 1rem; line-height: 1.5; color: var(--plum);">
             {chunk_html}
           </div>
@@ -288,7 +288,7 @@ for person, wish_text in content.get('wishes', {}).items():
         pages.append(f"""
           <section class="page">
             <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px; text-align: left;">{title}</h2>
-            <div class="journal-card" style="width: 100%; height: 85%; padding: 20px; box-sizing: border-box;">
+            <div class="journal-card" style="width: 100%; flex-grow: 1; padding: 20px; box-sizing: border-box;">
               <div style="font-size: 1rem; line-height: 1.5; color: var(--plum);">
                 {photo_insert}
                 {chunk_html}
