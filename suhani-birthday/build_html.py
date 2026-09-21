@@ -282,6 +282,8 @@ for person, wish_text in content.get('wishes', {}).items():
               <div class="photo-stamp" style="width: 200px; height: 230px; transform: rotate(-2deg); margin: 8px;"><img src="photos/originals/kashish2.jpeg" alt="Kashish"></div>
             </div>
             '''
+        elif person == 'garima' and i == 0:
+            photo_insert = '<div class="photo-stamp" style="float: right; width: 220px; height: 260px; margin-left: 15px; margin-bottom: 10px; transform: rotate(4deg);"><img src="photos/originals/suga.png" alt="Suga"></div>'
             
         pages.append(f"""
           <section class="page">
